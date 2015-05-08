@@ -1,8 +1,16 @@
 ﻿<Window x:Class="WPF_SangJin.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="480" Width="720" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}">
+    <Border BorderThickness="1" HorizontalAlignment="Center" Height="460" Margin="0" VerticalAlignment="Center" Width="700" BorderBrush="Black">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="12" Direction="270" ShadowDepth="2"/>
+        </Border.Effect>
+        <Grid x:Name="backgroundgrid" Background="White" Margin="1,1,-1,-1" MouseLeftButtonDown="backgroundgrid_MouseLeftButtonDown">
+            <Grid HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="698">
+                <Button x:Name="cnacelButton" Content="X" HorizontalAlignment="Right" Margin="678,0,0,0" VerticalAlignment="Top" Width="20" BorderBrush="{x:Null}" FontWeight="Bold" BorderThickness="0" Click="cancelButton_Click" Background="White"/>
+                <Button x:Name="minimizeButton" Content="ㅡ" HorizontalAlignment="Right" Margin="0,0,20,-1" VerticalAlignment="Top" Width="20" BorderBrush="{x:Null}" FontWeight="Bold" BorderThickness="0" Click="minimizeButton_Click" Background="White"/>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>
